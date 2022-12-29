@@ -1,36 +1,19 @@
 import type { NextPage } from 'next';
-import styled from 'styled-components';
 import Head from 'next/head';
-import Hero from 'src/home/hero';
-import Features from 'src/home/features';
-import NavBar from 'src/home/navbar';
+import HomeLayout from 'src/modules/home/HomeLayout';
 
-const Main = styled.main`
-  padding: 10px 5% 0;
-  margin: auto;
-  max-width: 1200px;
-
-  & > div {
-    margin-bottom: 25px;
-  }
-`;
-
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>Resume Builder</title>
-        <meta name="description" content="Single Page Resume Builder for everyone" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>E-Resume: Home</title>
+        <meta name="description" content="Single Page Resume Builder" />
+        <link rel="icon" type="image/png" href="/icons/resume-icon.png" />
       </Head>
 
-      <Main>
-        <NavBar />
-        <Hero />
-        <Features />
-      </Main>
-    </>
+      <HomeLayout />
+    </div>
   );
 };
 
-export default Home;
+export default HomePage;
