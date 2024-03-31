@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
     dirs: [
-      'stories',
+      'src/stories',
       'src/__test__',
       'src/common',
       'src/helpers',
@@ -14,7 +14,13 @@ const nextConfig = {
     ],
   },
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '**',
+      },
+    ],
   },
   async redirects() {
     return [
